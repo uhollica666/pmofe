@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prime Minister's Office of Bhutan</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
@@ -15,6 +14,7 @@
                     colors: {
                         'bhutan-amber': '#FF8C00',
                         'bhutan-red': '#D2691E',
+                        'bhutan-gold': '#FFD700',
                     },
                     fontFamily: {
                         'poppins': ['Poppins', 'sans-serif'],
@@ -27,56 +27,102 @@
         body {
             font-family: 'Poppins', sans-serif;
         }
+        .menu-item {
+            @apply relative overflow-hidden;
+        }
+        .menu-item::after {
+            content: '';
+            @apply absolute bottom-0 left-0 w-full h-0.5 bg-bhutan-gold transform scale-x-0 transition-transform duration-300 ease-in-out;
+        }
+        .menu-item:hover::after {
+            @apply scale-x-100;
+        }
     </style>
 </head>
-
 <body class="bg-gray-100">
     <!-- Top Bar -->
     <div class="bg-bhutan-amber text-white py-2">
         <div class="container mx-auto px-4 flex justify-between items-center">
-            <div>
-                <span class="mr-4">📧 info@pmo.gov.bt</span>
-                <span>📞 +975 2 323845</span>
+            <div class="hidden sm:flex items-center space-x-4">
+                <span><i class="fas fa-envelope mr-2"></i>info@pmo.gov.bt</span>
+                <span><i class="fas fa-phone mr-2"></i>+975 2 323845</span>
             </div>
-            <div>
-                <a href="#" class="mr-4">English</a>
-                <a href="#">Dzongkha</a>
+            <div class="flex items-center space-x-4">
+                <a href="#" class="text-sm hover:text-bhutan-gold transition duration-300">English</a>
+                <a href="#" class="text-sm hover:text-bhutan-gold transition duration-300">Dzongkha</a>
+                <a href="/wp-admin" class="bg-white text-bhutan-amber px-3 py-1 rounded-full text-sm hover:bg-bhutan-red hover:text-white transition duration-300" aria-label="Login to admin panel">
+                    <i class="fas fa-user mr-1"></i>Login
+                </a>
             </div>
         </div>
     </div>
 
     <!-- Header -->
-    <header class="bg-white shadow-md">
-        <div class="container mx-auto px-4 py-4">
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
             <div class="flex justify-between items-center">
-                <img src="/api/placeholder/100/60" alt="Government Logo" class="h-16">
-                <img src="/api/placeholder/120/60" alt="Office Logo" class="h-16">
-                <img src="/api/placeholder/100/60" alt="Seal Logo" class="h-16">
-            </div>
-            <div class="mt-4">
-                <form class="flex">
-                    <input type="text" placeholder="Search..."
-                        class="flex-grow p-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-bhutan-amber">
-                    <button type="submit"
-                        class="bg-bhutan-red text-white p-2 rounded-r-md hover:bg-bhutan-amber transition duration-300">Search</button>
-                </form>
+                <div class="flex items-center space-x-4">
+                    <img src="./assets/img/rgob.png" alt="Prime Minister's Office Logo" class="h-12 md:h-16">
+                    <img src="./assets/img/pmo-logo.png" alt="Prime Minister's Office Logo" class="h-12 md:h-16">
+                </div>
+                <nav class="hidden md:block">
+                    <ul class="flex space-x-6">
+                        <li><a href="#" class="menu-item text-gray-700 hover:text-bhutan-red transition duration-300">Home</a></li>
+                        <li><a href="#" class="menu-item text-gray-700 hover:text-bhutan-red transition duration-300">About</a></li>
+                        <li><a href="#" class="menu-item text-gray-700 hover:text-bhutan-red transition duration-300">Ministries</a></li>
+                        <li><a href="#" class="menu-item text-gray-700 hover:text-bhutan-red transition duration-300">Services</a></li>
+                        <li><a href="#" class="menu-item text-gray-700 hover:text-bhutan-red transition duration-300">News</a></li>
+                        <li><a href="#" class="menu-item text-gray-700 hover:text-bhutan-red transition duration-300">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="flex items-center space-x-4">
+                    <button id="searchToggle" class="text-gray-700 hover:text-bhutan-red transition duration-300" aria-label="Toggle search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <button id="menuToggle" class="md:hidden text-gray-700 hover:text-bhutan-red transition duration-300" aria-label="Toggle menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
             </div>
         </div>
     </header>
 
-    <!-- Navigation -->
-    <nav class="bg-bhutan-red text-white shadow-md">
-        <div class="container mx-auto px-4">
-            <ul class="flex justify-between py-4">
-                <li><a href="#" class="hover:text-bhutan-amber transition duration-300">Home</a></li>
-                <li><a href="#" class="hover:text-bhutan-amber transition duration-300">About</a></li>
-                <li><a href="#" class="hover:text-bhutan-amber transition duration-300">Ministries</a></li>
-                <li><a href="#" class="hover:text-bhutan-amber transition duration-300">Services</a></li>
-                <li><a href="#" class="hover:text-bhutan-amber transition duration-300">News</a></li>
-                <li><a href="#" class="hover:text-bhutan-amber transition duration-300">Contact</a></li>
-            </ul>
+    <!-- Mobile Menu Overlay -->
+    <div id="mobileMenu" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
+        <div class="bg-white h-full w-64 p-6 transform transition-transform duration-300 ease-in-out translate-x-0">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-xl font-semibold text-bhutan-red">Menu</h2>
+                <button id="closeMenu" class="text-gray-600 hover:text-bhutan-red transition duration-300" aria-label="Close menu">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <nav>
+                <ul class="space-y-4">
+                    <li><a href="#" class="block text-gray-700 hover:text-bhutan-red transition duration-300">Home</a></li>
+                    <li><a href="#" class="block text-gray-700 hover:text-bhutan-red transition duration-300">About</a></li>
+                    <li><a href="#" class="block text-gray-700 hover:text-bhutan-red transition duration-300">Ministries</a></li>
+                    <li><a href="#" class="block text-gray-700 hover:text-bhutan-red transition duration-300">Services</a></li>
+                    <li><a href="#" class="block text-gray-700 hover:text-bhutan-red transition duration-300">News</a></li>
+                    <li><a href="#" class="block text-gray-700 hover:text-bhutan-red transition duration-300">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-    </nav>
+    </div>
+
+    <!-- Search Overlay -->
+    <div id="searchOverlay" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center">
+        <div class="bg-white p-6 rounded-lg w-full max-w-2xl mx-4">
+            <form class="flex items-center">
+                <input type="text" placeholder="Search..." class="flex-grow p-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-bhutan-amber" aria-label="Search">
+                <button type="submit" class="bg-bhutan-red text-white p-2 rounded-r-md hover:bg-bhutan-amber transition duration-300" aria-label="Submit search">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+            <button id="closeSearch" class="mt-4 text-gray-600 hover:text-bhutan-red transition duration-300">
+                <i class="fas fa-times"></i> Close
+            </button>
+        </div>
+    </div>
 
     <!-- Slider Area -->
     <section class="bg-gray-200 py-12">
@@ -178,7 +224,7 @@
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div>
-                    <img src="/api/placeholder/120/60" alt="Office Logo" class="h-16 mb-4">
+                    <img src="./assets/img/rgob.png" alt="Office Logo" class="h-16 mb-4">
                     <p>Prime Minister's Office</p>
                     <p>Gyalyong Tshokhang</p>
                     <p>Thimphu, Bhutan</p>
@@ -221,6 +267,37 @@
             <p>&copy; 2024 Prime Minister's Office of Bhutan. All rights reserved.</p>
         </div>
     </div>
+
+
+    <!-- Scripts -->
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const closeMenu = document.getElementById('closeMenu');
+        const searchToggle = document.getElementById('searchToggle');
+        const searchOverlay = document.getElementById('searchOverlay');
+        const closeSearch = document.getElementById('closeSearch');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+            mobileMenu.querySelector('div').classList.remove('-translate-x-full');
+        });
+
+        closeMenu.addEventListener('click', () => {
+            mobileMenu.querySelector('div').classList.add('-translate-x-full');
+            setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+            }, 300);
+        });
+
+        searchToggle.addEventListener('click', () => {
+            searchOverlay.classList.remove('hidden');
+        });
+
+        closeSearch.addEventListener('click', () => {
+            searchOverlay.classList.add('hidden');
+        });
+    </script>
 </body>
 
 </html>
