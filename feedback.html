@@ -4,12 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prime Minister's Office of Bhutan</title>
+    <title>Contact Us - Prime Minister's Office of Bhutan</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -30,29 +29,7 @@
         body {
             font-family: 'Poppins', sans-serif;
         }
-
-        .menu-item {
-            @apply relative overflow-hidden;
-        }
-
-        .menu-item::after {
-            content: '';
-            @apply absolute bottom-0 left-0 w-full h-0.5 bg-bhutan-gold transform scale-x-0 transition-transform duration-300 ease-in-out;
-        }
-
-        .menu-item:hover::after {
-            @apply scale-x-100;
-        }
-
-        .goog-te-banner-frame.skiptranslate {
-            display: none !important;
-        }
-
-        body {
-            top: 0 !important;
-        }
     </style>
-
 </head>
 
 <body class="bg-gray-100">
@@ -140,8 +117,8 @@
                                 class="menu-item text-gray-700 hover:text-bhutan-red transition duration-300">Contact</a>
                         </li>
                         <li><a href="feedback.html"
-                                class="menu-item text-gray-700 hover:text-bhutan-red transition duration-300">Feedback</a>
-                        </li>
+                            class="menu-item text-gray-700 hover:text-bhutan-red transition duration-300">Feedback</a>
+                    </li>
                     </ul>
                 </nav>
                 <div class="flex items-center space-x-4">
@@ -199,6 +176,7 @@
                             <li><a href="feedback.html"
                                 class="block text-gray-700 hover:text-bhutan-red transition duration-300">Feedback</a>
                         </li>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -223,97 +201,63 @@
         </div>
     </div>
 
-    <!-- Slider Area -->
-    <section class="bg-gray-200 py-12">
+    <section class="py-16 bg-gray-100">
         <div class="container mx-auto px-4">
-            <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                <img src="/api/placeholder/1200/400" alt="Slider Image" class="w-full h-64 object-cover">
-                <div class="p-6">
-                    <h2 class="text-3xl font-bold mb-4">Welcome to the Prime Minister's Office</h2>
-                    <p class="text-gray-600 mb-4">Serving the people of Bhutan with dedication and vision</p>
-                    <a href="#"
-                        class="bg-bhutan-amber text-white px-4 py-2 rounded-md hover:bg-bhutan-red transition duration-300">Learn
-                        More</a>
-                </div>
-            </div>
-        </div>
-    </section>
+            <h2 class="text-3xl font-bold mb-8 text-center text-bhutan-red">Your Voice Matters</h2>
+            <p class="text-center mb-8 text-gray-600">We value your honest feedback. Help us improve our services by
+                sharing your thoughts anonymously.</p>
 
-    <!-- Latest News and Posts -->
-    <section class="py-12">
-        <div class="container mx-auto px-4">
-            <h2 class="text-2xl font-bold mb-6">Latest News and Updates</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="/api/placeholder/400/200" alt="News 1" class="w-full h-40 object-cover">
-                    <div class="p-4">
-                        <h3 class="font-bold mb-2">New Economic Policy Announced</h3>
-                        <p class="text-gray-600 text-sm">The Prime Minister unveiled a new economic policy aimed at
-                            boosting growth and sustainability...</p>
-                        <a href="#"
-                            class="text-bhutan-red hover:text-bhutan-amber transition duration-300 mt-2 inline-block">Read
-                            More</a>
+            <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-md p-8">
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold mb-4 text-bhutan-amber">How was your experience?</h3>
+                    <div class="flex justify-center space-x-4">
+                        <button class="feedback-btn" data-rating="1"><i class="fas fa-angry text-4xl"></i></button>
+                        <button class="feedback-btn" data-rating="2"><i class="fas fa-frown text-4xl"></i></button>
+                        <button class="feedback-btn" data-rating="3"><i class="fas fa-meh text-4xl"></i></button>
+                        <button class="feedback-btn" data-rating="4"><i class="fas fa-smile text-4xl"></i></button>
+                        <button class="feedback-btn" data-rating="5"><i class="fas fa-grin-stars text-4xl"></i></button>
                     </div>
                 </div>
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="/api/placeholder/400/200" alt="News 2" class="w-full h-40 object-cover">
-                    <div class="p-4">
-                        <h3 class="font-bold mb-2">Bhutan Hosts International Summit</h3>
-                        <p class="text-gray-600 text-sm">Bhutan successfully hosted an international summit on climate
-                            change, bringing together world leaders...</p>
-                        <a href="#"
-                            class="text-bhutan-red hover:text-bhutan-amber transition duration-300 mt-2 inline-block">Read
-                            More</a>
-                    </div>
-                </div>
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="/api/placeholder/400/200" alt="News 3" class="w-full h-40 object-cover">
-                    <div class="p-4">
-                        <h3 class="font-bold mb-2">New Education Initiative Launched</h3>
-                        <p class="text-gray-600 text-sm">The government has launched a new education initiative to
-                            improve access to quality education across the country...</p>
-                        <a href="#"
-                            class="text-bhutan-red hover:text-bhutan-amber transition duration-300 mt-2 inline-block">Read
-                            More</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Members Showcase -->
-    <section class="bg-gray-100 py-12">
-        <div class="container mx-auto px-4">
-            <h2 class="text-2xl font-bold mb-6">Cabinet Members</h2>
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-                <div class="bg-white rounded-lg shadow-md overflow-hidden text-center">
-                    <img src="/api/placeholder/200/200" alt="Member 1" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h3 class="font-bold">John Doe</h3>
-                        <p class="text-gray-600 text-sm">Prime Minister</p>
+                <form id="feedbackForm">
+                    <div class="mb-6">
+                        <label for="department" class="block mb-2 font-semibold text-gray-700">Which department does
+                            your feedback concern?</label>
+                        <select id="department" name="department" required
+                            class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-bhutan-amber">
+                            <option value="">Select a department</option>
+                            <option value="general">General Administration</option>
+                            <option value="finance">Finance</option>
+                            <option value="foreign">Foreign Affairs</option>
+                            <option value="health">Health</option>
+                            <option value="education">Education</option>
+                        </select>
                     </div>
-                </div>
-                <div class="bg-white rounded-lg shadow-md overflow-hidden text-center">
-                    <img src="/api/placeholder/200/200" alt="Member 2" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h3 class="font-bold">Jane Smith</h3>
-                        <p class="text-gray-600 text-sm">Foreign Minister</p>
+                    <div class="mb-6">
+                        <label for="feedback" class="block mb-2 font-semibold text-gray-700">Your Feedback</label>
+                        <textarea id="feedback" name="feedback" rows="5" required
+                            class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-bhutan-amber"
+                            placeholder="Share your thoughts, suggestions, or concerns..."></textarea>
                     </div>
-                </div>
-                <div class="bg-white rounded-lg shadow-md overflow-hidden text-center">
-                    <img src="/api/placeholder/200/200" alt="Member 3" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h3 class="font-bold">Mike Johnson</h3>
-                        <p class="text-gray-600 text-sm">Finance Minister</p>
+                    <div class="mb-6">
+                        <label class="flex items-center">
+                            <input type="checkbox" name="subscribe" class="form-checkbox text-bhutan-amber">
+                            <span class="ml-2 text-gray-700">I'd like to receive updates on how my feedback is being
+                                addressed (optional)</span>
+                        </label>
                     </div>
-                </div>
-                <div class="bg-white rounded-lg shadow-md overflow-hidden text-center">
-                    <img src="/api/placeholder/200/200" alt="Member 4" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h3 class="font-bold">Sarah Lee</h3>
-                        <p class="text-gray-600 text-sm">Education Minister</p>
+                    <div id="emailField" class="mb-6 hidden">
+                        <label for="email" class="block mb-2 font-semibold text-gray-700">Email Address</label>
+                        <input type="email" id="email" name="email"
+                            class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-bhutan-amber">
                     </div>
-                </div>
+                    <div class="text-center">
+                        <button type="submit"
+                            class="bg-bhutan-amber text-white px-6 py-3 rounded-md hover:bg-bhutan-red transition duration-300">
+                            Submit Feedback
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
     </section>
@@ -454,6 +398,47 @@
             searchOverlay.classList.add('hidden');
         });
     </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const feedbackBtns = document.querySelectorAll('.feedback-btn');
+            const subscribeCheckbox = document.querySelector('input[name="subscribe"]');
+            const emailField = document.getElementById('emailField');
+
+            feedbackBtns.forEach(btn => {
+                btn.addEventListener('click', function () {
+                    feedbackBtns.forEach(b => b.classList.remove('selected'));
+                    this.classList.add('selected');
+                });
+            });
+
+            subscribeCheckbox.addEventListener('change', function () {
+                emailField.style.display = this.checked ? 'block' : 'none';
+            });
+
+            document.getElementById('feedbackForm').addEventListener('submit', function (e) {
+                e.preventDefault();
+                // Here you would typically send the form data to your server
+                alert('Thank you for your feedback!');
+                this.reset();
+                feedbackBtns.forEach(b => b.classList.remove('selected'));
+                emailField.style.display = 'none';
+            });
+        });
+    </script>
+
+    <style>
+        .feedback-btn {
+            color: #ccc;
+            transition: color 0.3s ease;
+        }
+
+        .feedback-btn:hover,
+        .feedback-btn.selected {
+            color: #FFD700;
+        }
+    </style>
+
 </body>
 
 </html>

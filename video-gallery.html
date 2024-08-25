@@ -196,13 +196,14 @@
                             class="block text-gray-700 hover:text-bhutan-red transition duration-300">Downloads</a></li>
                     <li><a href="contact.html"
                             class="block text-gray-700 hover:text-bhutan-red transition duration-300">Contact</a></li>
-                            <li><a href="feedback.html"
-                                class="block text-gray-700 hover:text-bhutan-red transition duration-300">Feedback</a>
-                        </li>
+                    <li><a href="feedback.html"
+                            class="block text-gray-700 hover:text-bhutan-red transition duration-300">Feedback</a>
+                    </li>
                 </ul>
             </nav>
         </div>
     </div>
+
 
     <!-- Search Overlay -->
     <div id="searchOverlay" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center">
@@ -223,100 +224,115 @@
         </div>
     </div>
 
-    <!-- Slider Area -->
-    <section class="bg-gray-200 py-12">
+    <!-- page content -->
+    <!-- Video Gallery and Live Streaming Section -->
+    <section class="py-16 bg-gray-100">
         <div class="container mx-auto px-4">
-            <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                <img src="/api/placeholder/1200/400" alt="Slider Image" class="w-full h-64 object-cover">
-                <div class="p-6">
-                    <h2 class="text-3xl font-bold mb-4">Welcome to the Prime Minister's Office</h2>
-                    <p class="text-gray-600 mb-4">Serving the people of Bhutan with dedication and vision</p>
+            <h2 class="text-3xl font-bold mb-8 text-center text-bhutan-red">Video Gallery & Live Streams</h2>
+
+            <div class="max-w-6xl mx-auto">
+                <!-- Live Stream Section -->
+                <div class="bg-white rounded-lg shadow-md p-8 mb-12">
+                    <h3 class="text-2xl font-semibold mb-4 text-bhutan-amber">Live Stream</h3>
+                    <div class="aspect-w-16 aspect-h-9 mb-4">
+                        <iframe src="https://www.youtube.com/embed/live_stream?channel=CHANNEL_ID" frameborder="0"
+                            allowfullscreen class="w-full h-full rounded-lg"></iframe>
+                    </div>
+                    <p class="text-gray-700 mb-4">Watch live streams of important events, press conferences, and
+                        addresses by the Prime Minister of Bhutan.</p>
+                    <div class="flex items-center space-x-4">
+                        <span class="text-bhutan-red font-semibold">Next Scheduled Stream:</span>
+                        <span class="bg-bhutan-gold text-white text-sm font-semibold px-3 py-1 rounded-full">
+                            <i class="far fa-clock mr-2"></i>September 15, 2024 - 10:00 AM BT
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Video Gallery -->
+                <h3 class="text-2xl font-bold mb-6 text-bhutan-red">Recent Videos</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                    <!-- Video Item 1 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="aspect-w-16 aspect-h-9">
+                            <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" frameborder="0" allowfullscreen
+                                class="w-full h-full"></iframe>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="text-lg font-semibold mb-2 text-bhutan-red">PM's Address on National Day</h4>
+                            <p class="text-gray-600 text-sm mb-2"><i
+                                    class="far fa-calendar-alt mr-2 text-bhutan-amber"></i>December 17, 2023</p>
+                            <a href="#" class="text-bhutan-red hover:underline text-sm">Watch Full Video</a>
+                        </div>
+                    </div>
+
+                    <!-- Video Item 2 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="aspect-w-16 aspect-h-9">
+                            <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" frameborder="0" allowfullscreen
+                                class="w-full h-full"></iframe>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="text-lg font-semibold mb-2 text-bhutan-red">Press Conference: Economic Recovery
+                                Plan</h4>
+                            <p class="text-gray-600 text-sm mb-2"><i
+                                    class="far fa-calendar-alt mr-2 text-bhutan-amber"></i>March 5, 2024</p>
+                            <a href="#" class="text-bhutan-red hover:underline text-sm">Watch Full Video</a>
+                        </div>
+                    </div>
+
+                    <!-- Video Item 3 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="aspect-w-16 aspect-h-9">
+                            <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" frameborder="0" allowfullscreen
+                                class="w-full h-full"></iframe>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="text-lg font-semibold mb-2 text-bhutan-red">Inauguration of New Hydropower
+                                Project</h4>
+                            <p class="text-gray-600 text-sm mb-2"><i
+                                    class="far fa-calendar-alt mr-2 text-bhutan-amber"></i>June 10, 2024</p>
+                            <a href="#" class="text-bhutan-red hover:underline text-sm">Watch Full Video</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Categories -->
+                <div class="bg-white rounded-lg shadow-md p-8">
+                    <h3 class="text-2xl font-semibold mb-6 text-bhutan-amber">Video Categories</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                        <a href="#"
+                            class="bg-gray-100 text-bhutan-red hover:bg-bhutan-red hover:text-white transition duration-300 rounded-lg p-4 text-center">
+                            <i class="fas fa-flag mb-2 text-2xl"></i>
+                            <span class="block">National Addresses</span>
+                        </a>
+                        <a href="#"
+                            class="bg-gray-100 text-bhutan-red hover:bg-bhutan-red hover:text-white transition duration-300 rounded-lg p-4 text-center">
+                            <i class="fas fa-handshake mb-2 text-2xl"></i>
+                            <span class="block">International Relations</span>
+                        </a>
+                        <a href="#"
+                            class="bg-gray-100 text-bhutan-red hover:bg-bhutan-red hover:text-white transition duration-300 rounded-lg p-4 text-center">
+                            <i class="fas fa-chart-line mb-2 text-2xl"></i>
+                            <span class="block">Economic Updates</span>
+                        </a>
+                        <a href="#"
+                            class="bg-gray-100 text-bhutan-red hover:bg-bhutan-red hover:text-white transition duration-300 rounded-lg p-4 text-center">
+                            <i class="fas fa-users mb-2 text-2xl"></i>
+                            <span class="block">Public Events</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="mt-12 text-center">
                     <a href="#"
-                        class="bg-bhutan-amber text-white px-4 py-2 rounded-md hover:bg-bhutan-red transition duration-300">Learn
-                        More</a>
+                        class="bg-bhutan-red text-white px-6 py-3 rounded-full inline-block hover:bg-bhutan-amber transition duration-300">
+                        View All Videos
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Latest News and Posts -->
-    <section class="py-12">
-        <div class="container mx-auto px-4">
-            <h2 class="text-2xl font-bold mb-6">Latest News and Updates</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="/api/placeholder/400/200" alt="News 1" class="w-full h-40 object-cover">
-                    <div class="p-4">
-                        <h3 class="font-bold mb-2">New Economic Policy Announced</h3>
-                        <p class="text-gray-600 text-sm">The Prime Minister unveiled a new economic policy aimed at
-                            boosting growth and sustainability...</p>
-                        <a href="#"
-                            class="text-bhutan-red hover:text-bhutan-amber transition duration-300 mt-2 inline-block">Read
-                            More</a>
-                    </div>
-                </div>
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="/api/placeholder/400/200" alt="News 2" class="w-full h-40 object-cover">
-                    <div class="p-4">
-                        <h3 class="font-bold mb-2">Bhutan Hosts International Summit</h3>
-                        <p class="text-gray-600 text-sm">Bhutan successfully hosted an international summit on climate
-                            change, bringing together world leaders...</p>
-                        <a href="#"
-                            class="text-bhutan-red hover:text-bhutan-amber transition duration-300 mt-2 inline-block">Read
-                            More</a>
-                    </div>
-                </div>
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="/api/placeholder/400/200" alt="News 3" class="w-full h-40 object-cover">
-                    <div class="p-4">
-                        <h3 class="font-bold mb-2">New Education Initiative Launched</h3>
-                        <p class="text-gray-600 text-sm">The government has launched a new education initiative to
-                            improve access to quality education across the country...</p>
-                        <a href="#"
-                            class="text-bhutan-red hover:text-bhutan-amber transition duration-300 mt-2 inline-block">Read
-                            More</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Members Showcase -->
-    <section class="bg-gray-100 py-12">
-        <div class="container mx-auto px-4">
-            <h2 class="text-2xl font-bold mb-6">Cabinet Members</h2>
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-                <div class="bg-white rounded-lg shadow-md overflow-hidden text-center">
-                    <img src="/api/placeholder/200/200" alt="Member 1" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h3 class="font-bold">John Doe</h3>
-                        <p class="text-gray-600 text-sm">Prime Minister</p>
-                    </div>
-                </div>
-                <div class="bg-white rounded-lg shadow-md overflow-hidden text-center">
-                    <img src="/api/placeholder/200/200" alt="Member 2" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h3 class="font-bold">Jane Smith</h3>
-                        <p class="text-gray-600 text-sm">Foreign Minister</p>
-                    </div>
-                </div>
-                <div class="bg-white rounded-lg shadow-md overflow-hidden text-center">
-                    <img src="/api/placeholder/200/200" alt="Member 3" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h3 class="font-bold">Mike Johnson</h3>
-                        <p class="text-gray-600 text-sm">Finance Minister</p>
-                    </div>
-                </div>
-                <div class="bg-white rounded-lg shadow-md overflow-hidden text-center">
-                    <img src="/api/placeholder/200/200" alt="Member 4" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h3 class="font-bold">Sarah Lee</h3>
-                        <p class="text-gray-600 text-sm">Education Minister</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Footer -->
     <footer class="bg-bhutan-red text-white py-16">
@@ -359,7 +375,8 @@
                     <h3 class="text-lg font-bold mb-6 pb-2 border-b-2 border-bhutan-amber inline-block">Connect With Us
                     </h3>
                     <p class="flex items-center mb-3"><i
-                            class="fas fa-envelope mr-3 text-bhutan-amber"></i>info@pmo.gov.bt</p>
+                            class="fas fa-envelope mr-3 text-bhutan-amber"></i>info@pmo.gov.bt
+                    </p>
                     <p class="flex items-center mb-6"><i class="fas fa-phone-alt mr-3 text-bhutan-amber"></i>+975 2
                         323845</p>
                     <div class="flex space-x-4">
@@ -404,56 +421,9 @@
 
     <script type="text/javascript"
         src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-    <script>
-        // Text size change function
-        function changeTextSize(action) {
-            var body = document.body;
-            var currentSize = window.getComputedStyle(body, null).getPropertyValue('font-size');
-            var newSize;
 
-            switch (action) {
-                case 'increase':
-                    newSize = parseFloat(currentSize) * 1.1;
-                    break;
-                case 'decrease':
-                    newSize = parseFloat(currentSize) * 0.9;
-                    break;
-                case 'reset':
-                    newSize = 16;  // Default font size
-                    break;
-            }
+    <!-- addtional scripts -->
 
-            body.style.fontSize = newSize + 'px';
-        }
-
-        // Existing script for menu toggle and search overlay
-        const menuToggle = document.getElementById('menuToggle');
-        const mobileMenu = document.getElementById('mobileMenu');
-        const closeMenu = document.getElementById('closeMenu');
-        const searchToggle = document.getElementById('searchToggle');
-        const searchOverlay = document.getElementById('searchOverlay');
-        const closeSearch = document.getElementById('closeSearch');
-
-        menuToggle.addEventListener('click', () => {
-            mobileMenu.classList.remove('hidden');
-            mobileMenu.querySelector('div').classList.remove('-translate-x-full');
-        });
-
-        closeMenu.addEventListener('click', () => {
-            mobileMenu.querySelector('div').classList.add('-translate-x-full');
-            setTimeout(() => {
-                mobileMenu.classList.add('hidden');
-            }, 300);
-        });
-
-        searchToggle.addEventListener('click', () => {
-            searchOverlay.classList.remove('hidden');
-        });
-
-        closeSearch.addEventListener('click', () => {
-            searchOverlay.classList.add('hidden');
-        });
-    </script>
 </body>
 
 </html>

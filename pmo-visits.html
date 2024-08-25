@@ -223,96 +223,86 @@
         </div>
     </div>
 
-    <!-- Slider Area -->
-    <section class="bg-gray-200 py-12">
+    <!-- page content -->
+    <!-- PMO Visits Section -->
+    <section class="py-16 bg-gray-100">
         <div class="container mx-auto px-4">
-            <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                <img src="/api/placeholder/1200/400" alt="Slider Image" class="w-full h-64 object-cover">
-                <div class="p-6">
-                    <h2 class="text-3xl font-bold mb-4">Welcome to the Prime Minister's Office</h2>
-                    <p class="text-gray-600 mb-4">Serving the people of Bhutan with dedication and vision</p>
+            <h2 class="text-3xl font-bold mb-8 text-center text-bhutan-red">Prime Minister's Official Visits</h2>
+
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-white rounded-lg shadow-md p-8 mb-12">
+                    <h3 class="text-2xl font-semibold mb-4 text-bhutan-amber">Recent and Upcoming Visits</h3>
+                    <p class="text-gray-700 mb-4">The Prime Minister of Bhutan conducts various official and state
+                        visits to strengthen international relations, promote Bhutan's interests, and foster cooperation
+                        with other nations.</p>
+                    <a href="#" class="text-bhutan-red hover:underline">View All Visits</a>
+                </div>
+
+                <div class="space-y-8">
+                    <!-- Upcoming Visit -->
+                    <div class="bg-white rounded-lg shadow-md p-6 border-l-4 border-bhutan-gold">
+                        <div class="flex justify-between items-start mb-4">
+                            <h4 class="text-xl font-semibold text-bhutan-red">Upcoming: Official Visit to Japan</h4>
+                            <span
+                                class="bg-bhutan-gold text-white text-sm font-semibold px-3 py-1 rounded-full">Upcoming</span>
+                        </div>
+                        <p class="text-gray-600 mb-2"><i class="far fa-calendar-alt mr-2 text-bhutan-amber"></i>15-20
+                            September, 2024</p>
+                        <p class="text-gray-700 mb-4">The Prime Minister will visit Japan to discuss bilateral
+                            cooperation in economic development, technology transfer, and cultural exchange.</p>
+                        <a href="#" class="text-bhutan-red hover:underline">Learn More</a>
+                    </div>
+
+                    <!-- Recent Visit -->
+                    <div class="bg-white rounded-lg shadow-md p-6 border-l-4 border-bhutan-red">
+                        <div class="flex justify-between items-start mb-4">
+                            <h4 class="text-xl font-semibold text-bhutan-red">State Visit to India</h4>
+                            <span
+                                class="bg-bhutan-red text-white text-sm font-semibold px-3 py-1 rounded-full">Recent</span>
+                        </div>
+                        <p class="text-gray-600 mb-2"><i class="far fa-calendar-alt mr-2 text-bhutan-amber"></i>5-10
+                            July, 2024</p>
+                        <p class="text-gray-700 mb-4">The Prime Minister conducted a successful state visit to India,
+                            strengthening the special relationship between the two nations and discussing hydropower
+                            projects, trade, and border security.</p>
+                        <div class="flex space-x-4 mt-4">
+                            <a href="#" class="text-bhutan-red hover:underline flex items-center">
+                                <i class="far fa-file-alt mr-2"></i>Joint Statement
+                            </a>
+                            <a href="#" class="text-bhutan-red hover:underline flex items-center">
+                                <i class="far fa-images mr-2"></i>Photo Gallery
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Past Visit -->
+                    <div class="bg-white rounded-lg shadow-md p-6 border-l-4 border-gray-300">
+                        <div class="flex justify-between items-start mb-4">
+                            <h4 class="text-xl font-semibold text-bhutan-red">Official Visit to Singapore</h4>
+                            <span
+                                class="bg-gray-300 text-gray-700 text-sm font-semibold px-3 py-1 rounded-full">Past</span>
+                        </div>
+                        <p class="text-gray-600 mb-2"><i class="far fa-calendar-alt mr-2 text-bhutan-amber"></i>20-25
+                            March, 2024</p>
+                        <p class="text-gray-700 mb-4">The Prime Minister visited Singapore to explore cooperation in
+                            urban planning, education, and sustainable development. Key outcomes included MOUs on
+                            technical education and smart city initiatives.</p>
+                        <div class="flex space-x-4 mt-4">
+                            <a href="#" class="text-bhutan-red hover:underline flex items-center">
+                                <i class="far fa-file-alt mr-2"></i>Visit Report
+                            </a>
+                            <a href="#" class="text-bhutan-red hover:underline flex items-center">
+                                <i class="fab fa-youtube mr-2"></i>Video Highlights
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-12 text-center">
                     <a href="#"
-                        class="bg-bhutan-amber text-white px-4 py-2 rounded-md hover:bg-bhutan-red transition duration-300">Learn
-                        More</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Latest News and Posts -->
-    <section class="py-12">
-        <div class="container mx-auto px-4">
-            <h2 class="text-2xl font-bold mb-6">Latest News and Updates</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="/api/placeholder/400/200" alt="News 1" class="w-full h-40 object-cover">
-                    <div class="p-4">
-                        <h3 class="font-bold mb-2">New Economic Policy Announced</h3>
-                        <p class="text-gray-600 text-sm">The Prime Minister unveiled a new economic policy aimed at
-                            boosting growth and sustainability...</p>
-                        <a href="#"
-                            class="text-bhutan-red hover:text-bhutan-amber transition duration-300 mt-2 inline-block">Read
-                            More</a>
-                    </div>
-                </div>
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="/api/placeholder/400/200" alt="News 2" class="w-full h-40 object-cover">
-                    <div class="p-4">
-                        <h3 class="font-bold mb-2">Bhutan Hosts International Summit</h3>
-                        <p class="text-gray-600 text-sm">Bhutan successfully hosted an international summit on climate
-                            change, bringing together world leaders...</p>
-                        <a href="#"
-                            class="text-bhutan-red hover:text-bhutan-amber transition duration-300 mt-2 inline-block">Read
-                            More</a>
-                    </div>
-                </div>
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="/api/placeholder/400/200" alt="News 3" class="w-full h-40 object-cover">
-                    <div class="p-4">
-                        <h3 class="font-bold mb-2">New Education Initiative Launched</h3>
-                        <p class="text-gray-600 text-sm">The government has launched a new education initiative to
-                            improve access to quality education across the country...</p>
-                        <a href="#"
-                            class="text-bhutan-red hover:text-bhutan-amber transition duration-300 mt-2 inline-block">Read
-                            More</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Members Showcase -->
-    <section class="bg-gray-100 py-12">
-        <div class="container mx-auto px-4">
-            <h2 class="text-2xl font-bold mb-6">Cabinet Members</h2>
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-                <div class="bg-white rounded-lg shadow-md overflow-hidden text-center">
-                    <img src="/api/placeholder/200/200" alt="Member 1" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h3 class="font-bold">John Doe</h3>
-                        <p class="text-gray-600 text-sm">Prime Minister</p>
-                    </div>
-                </div>
-                <div class="bg-white rounded-lg shadow-md overflow-hidden text-center">
-                    <img src="/api/placeholder/200/200" alt="Member 2" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h3 class="font-bold">Jane Smith</h3>
-                        <p class="text-gray-600 text-sm">Foreign Minister</p>
-                    </div>
-                </div>
-                <div class="bg-white rounded-lg shadow-md overflow-hidden text-center">
-                    <img src="/api/placeholder/200/200" alt="Member 3" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h3 class="font-bold">Mike Johnson</h3>
-                        <p class="text-gray-600 text-sm">Finance Minister</p>
-                    </div>
-                </div>
-                <div class="bg-white rounded-lg shadow-md overflow-hidden text-center">
-                    <img src="/api/placeholder/200/200" alt="Member 4" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h3 class="font-bold">Sarah Lee</h3>
-                        <p class="text-gray-600 text-sm">Education Minister</p>
-                    </div>
+                        class="bg-bhutan-red text-white px-6 py-3 rounded-full inline-block hover:bg-bhutan-amber transition duration-300">
+                        View All Official Visits
+                    </a>
                 </div>
             </div>
         </div>
@@ -359,7 +349,8 @@
                     <h3 class="text-lg font-bold mb-6 pb-2 border-b-2 border-bhutan-amber inline-block">Connect With Us
                     </h3>
                     <p class="flex items-center mb-3"><i
-                            class="fas fa-envelope mr-3 text-bhutan-amber"></i>info@pmo.gov.bt</p>
+                            class="fas fa-envelope mr-3 text-bhutan-amber"></i>info@pmo.gov.bt
+                    </p>
                     <p class="flex items-center mb-6"><i class="fas fa-phone-alt mr-3 text-bhutan-amber"></i>+975 2
                         323845</p>
                     <div class="flex space-x-4">
@@ -404,56 +395,9 @@
 
     <script type="text/javascript"
         src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-    <script>
-        // Text size change function
-        function changeTextSize(action) {
-            var body = document.body;
-            var currentSize = window.getComputedStyle(body, null).getPropertyValue('font-size');
-            var newSize;
 
-            switch (action) {
-                case 'increase':
-                    newSize = parseFloat(currentSize) * 1.1;
-                    break;
-                case 'decrease':
-                    newSize = parseFloat(currentSize) * 0.9;
-                    break;
-                case 'reset':
-                    newSize = 16;  // Default font size
-                    break;
-            }
+    <!-- addtional scripts -->
 
-            body.style.fontSize = newSize + 'px';
-        }
-
-        // Existing script for menu toggle and search overlay
-        const menuToggle = document.getElementById('menuToggle');
-        const mobileMenu = document.getElementById('mobileMenu');
-        const closeMenu = document.getElementById('closeMenu');
-        const searchToggle = document.getElementById('searchToggle');
-        const searchOverlay = document.getElementById('searchOverlay');
-        const closeSearch = document.getElementById('closeSearch');
-
-        menuToggle.addEventListener('click', () => {
-            mobileMenu.classList.remove('hidden');
-            mobileMenu.querySelector('div').classList.remove('-translate-x-full');
-        });
-
-        closeMenu.addEventListener('click', () => {
-            mobileMenu.querySelector('div').classList.add('-translate-x-full');
-            setTimeout(() => {
-                mobileMenu.classList.add('hidden');
-            }, 300);
-        });
-
-        searchToggle.addEventListener('click', () => {
-            searchOverlay.classList.remove('hidden');
-        });
-
-        closeSearch.addEventListener('click', () => {
-            searchOverlay.classList.add('hidden');
-        });
-    </script>
 </body>
 
 </html>

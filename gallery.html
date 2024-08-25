@@ -4,12 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prime Minister's Office of Bhutan</title>
+    <title>Contact Us - Prime Minister's Office of Bhutan</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -30,29 +29,7 @@
         body {
             font-family: 'Poppins', sans-serif;
         }
-
-        .menu-item {
-            @apply relative overflow-hidden;
-        }
-
-        .menu-item::after {
-            content: '';
-            @apply absolute bottom-0 left-0 w-full h-0.5 bg-bhutan-gold transform scale-x-0 transition-transform duration-300 ease-in-out;
-        }
-
-        .menu-item:hover::after {
-            @apply scale-x-100;
-        }
-
-        .goog-te-banner-frame.skiptranslate {
-            display: none !important;
-        }
-
-        body {
-            top: 0 !important;
-        }
     </style>
-
 </head>
 
 <body class="bg-gray-100">
@@ -223,97 +200,39 @@
         </div>
     </div>
 
-    <!-- Slider Area -->
-    <section class="bg-gray-200 py-12">
+    <!-- Gallery Section -->
+    <section class="py-16 bg-gray-100">
         <div class="container mx-auto px-4">
-            <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                <img src="/api/placeholder/1200/400" alt="Slider Image" class="w-full h-64 object-cover">
-                <div class="p-6">
-                    <h2 class="text-3xl font-bold mb-4">Welcome to the Prime Minister's Office</h2>
-                    <p class="text-gray-600 mb-4">Serving the people of Bhutan with dedication and vision</p>
-                    <a href="#"
-                        class="bg-bhutan-amber text-white px-4 py-2 rounded-md hover:bg-bhutan-red transition duration-300">Learn
-                        More</a>
-                </div>
-            </div>
-        </div>
-    </section>
+            <h2 class="text-3xl font-bold mb-8 text-center text-bhutan-red">Photo Gallery</h2>
+            <p class="text-center mb-12 text-gray-600">Explore moments captured from various events and initiatives of
+                the Prime Minister's Office.</p>
 
-    <!-- Latest News and Posts -->
-    <section class="py-12">
-        <div class="container mx-auto px-4">
-            <h2 class="text-2xl font-bold mb-6">Latest News and Updates</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="/api/placeholder/400/200" alt="News 1" class="w-full h-40 object-cover">
-                    <div class="p-4">
-                        <h3 class="font-bold mb-2">New Economic Policy Announced</h3>
-                        <p class="text-gray-600 text-sm">The Prime Minister unveiled a new economic policy aimed at
-                            boosting growth and sustainability...</p>
-                        <a href="#"
-                            class="text-bhutan-red hover:text-bhutan-amber transition duration-300 mt-2 inline-block">Read
-                            More</a>
-                    </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Repeat this structure for each image -->
+                <div class="gallery-item">
+                    <img src="/api/placeholder/400/300" alt="Gallery Image 1"
+                        class="w-full h-64 object-cover rounded-lg shadow-md hover:shadow-xl transition duration-300">
                 </div>
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="/api/placeholder/400/200" alt="News 2" class="w-full h-40 object-cover">
-                    <div class="p-4">
-                        <h3 class="font-bold mb-2">Bhutan Hosts International Summit</h3>
-                        <p class="text-gray-600 text-sm">Bhutan successfully hosted an international summit on climate
-                            change, bringing together world leaders...</p>
-                        <a href="#"
-                            class="text-bhutan-red hover:text-bhutan-amber transition duration-300 mt-2 inline-block">Read
-                            More</a>
-                    </div>
+                <div class="gallery-item">
+                    <img src="/api/placeholder/400/300" alt="Gallery Image 2"
+                        class="w-full h-64 object-cover rounded-lg shadow-md hover:shadow-xl transition duration-300">
                 </div>
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="/api/placeholder/400/200" alt="News 3" class="w-full h-40 object-cover">
-                    <div class="p-4">
-                        <h3 class="font-bold mb-2">New Education Initiative Launched</h3>
-                        <p class="text-gray-600 text-sm">The government has launched a new education initiative to
-                            improve access to quality education across the country...</p>
-                        <a href="#"
-                            class="text-bhutan-red hover:text-bhutan-amber transition duration-300 mt-2 inline-block">Read
-                            More</a>
-                    </div>
+                <div class="gallery-item">
+                    <img src="/api/placeholder/400/300" alt="Gallery Image 3"
+                        class="w-full h-64 object-cover rounded-lg shadow-md hover:shadow-xl transition duration-300">
                 </div>
+                <div class="gallery-item">
+                    <img src="/api/placeholder/400/300" alt="Gallery Image 4"
+                        class="w-full h-64 object-cover rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                </div>
+                <!-- Add more gallery items as needed -->
             </div>
-        </div>
-    </section>
 
-    <!-- Members Showcase -->
-    <section class="bg-gray-100 py-12">
-        <div class="container mx-auto px-4">
-            <h2 class="text-2xl font-bold mb-6">Cabinet Members</h2>
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-                <div class="bg-white rounded-lg shadow-md overflow-hidden text-center">
-                    <img src="/api/placeholder/200/200" alt="Member 1" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h3 class="font-bold">John Doe</h3>
-                        <p class="text-gray-600 text-sm">Prime Minister</p>
-                    </div>
-                </div>
-                <div class="bg-white rounded-lg shadow-md overflow-hidden text-center">
-                    <img src="/api/placeholder/200/200" alt="Member 2" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h3 class="font-bold">Jane Smith</h3>
-                        <p class="text-gray-600 text-sm">Foreign Minister</p>
-                    </div>
-                </div>
-                <div class="bg-white rounded-lg shadow-md overflow-hidden text-center">
-                    <img src="/api/placeholder/200/200" alt="Member 3" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h3 class="font-bold">Mike Johnson</h3>
-                        <p class="text-gray-600 text-sm">Finance Minister</p>
-                    </div>
-                </div>
-                <div class="bg-white rounded-lg shadow-md overflow-hidden text-center">
-                    <img src="/api/placeholder/200/200" alt="Member 4" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h3 class="font-bold">Sarah Lee</h3>
-                        <p class="text-gray-600 text-sm">Education Minister</p>
-                    </div>
-                </div>
+            <div class="text-center mt-12">
+                <button id="loadMore"
+                    class="bg-bhutan-amber text-white px-6 py-3 rounded-md hover:bg-bhutan-red transition duration-300">
+                    Load More
+                </button>
             </div>
         </div>
     </section>
@@ -454,6 +373,24 @@
             searchOverlay.classList.add('hidden');
         });
     </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const loadMoreBtn = document.getElementById('loadMore');
+            const gallery = document.querySelector('.grid');
+
+            loadMoreBtn.addEventListener('click', function () {
+                // Here you would typically load more images from your server
+                // For this example, we'll just duplicate existing images
+                const items = document.querySelectorAll('.gallery-item');
+                items.forEach(item => {
+                    const clone = item.cloneNode(true);
+                    gallery.appendChild(clone);
+                });
+            });
+        });
+    </script>
+
 </body>
 
 </html>
