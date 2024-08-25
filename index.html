@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prime Minister's Office of Bhutan</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -27,18 +30,31 @@
         body {
             font-family: 'Poppins', sans-serif;
         }
+
         .menu-item {
             @apply relative overflow-hidden;
         }
+
         .menu-item::after {
             content: '';
             @apply absolute bottom-0 left-0 w-full h-0.5 bg-bhutan-gold transform scale-x-0 transition-transform duration-300 ease-in-out;
         }
+
         .menu-item:hover::after {
             @apply scale-x-100;
         }
+
+        .goog-te-banner-frame.skiptranslate {
+            display: none !important;
+        }
+
+        body {
+            top: 0 !important;
+        }
     </style>
+
 </head>
+
 <body class="bg-gray-100">
     <!-- Top Bar -->
     <div class="bg-bhutan-amber text-white py-2">
@@ -48,9 +64,21 @@
                 <span><i class="fas fa-phone mr-2"></i>+975 2 323845</span>
             </div>
             <div class="flex items-center space-x-4">
-                <a href="#" class="text-sm hover:text-bhutan-gold transition duration-300">English</a>
-                <a href="#" class="text-sm hover:text-bhutan-gold transition duration-300">Dzongkha</a>
-                <a href="/wp-admin" class="bg-white text-bhutan-amber px-3 py-1 rounded-full text-sm hover:bg-bhutan-red hover:text-white transition duration-300" aria-label="Login to admin panel">
+                <div id="google_translate_element"></div>
+                <div class="flex items-center space-x-2">
+                    <button onclick="changeTextSize('decrease')"
+                        class="text-sm bg-white text-bhutan-amber px-2 py-1 rounded-full hover:bg-bhutan-red hover:text-white transition duration-300"
+                        aria-label="Decrease text size">A-</button>
+                    <button onclick="changeTextSize('reset')"
+                        class="text-sm bg-white text-bhutan-amber px-2 py-1 rounded-full hover:bg-bhutan-red hover:text-white transition duration-300"
+                        aria-label="Reset text size">A</button>
+                    <button onclick="changeTextSize('increase')"
+                        class="text-sm bg-white text-bhutan-amber px-2 py-1 rounded-full hover:bg-bhutan-red hover:text-white transition duration-300"
+                        aria-label="Increase text size">A+</button>
+                </div>
+                <a href="/wp-admin"
+                    class="bg-white text-bhutan-amber px-3 py-1 rounded-full text-sm hover:bg-bhutan-red hover:text-white transition duration-300"
+                    aria-label="Login to admin panel">
                     <i class="fas fa-user mr-1"></i>Login
                 </a>
             </div>
@@ -67,19 +95,34 @@
                 </div>
                 <nav class="hidden md:block">
                     <ul class="flex space-x-6">
-                        <li><a href="#" class="menu-item text-gray-700 hover:text-bhutan-red transition duration-300">Home</a></li>
-                        <li><a href="#" class="menu-item text-gray-700 hover:text-bhutan-red transition duration-300">About</a></li>
-                        <li><a href="#" class="menu-item text-gray-700 hover:text-bhutan-red transition duration-300">Ministries</a></li>
-                        <li><a href="#" class="menu-item text-gray-700 hover:text-bhutan-red transition duration-300">Services</a></li>
-                        <li><a href="#" class="menu-item text-gray-700 hover:text-bhutan-red transition duration-300">News</a></li>
-                        <li><a href="#" class="menu-item text-gray-700 hover:text-bhutan-red transition duration-300">Contact</a></li>
+                        <li><a href="#"
+                                class="menu-item text-gray-700 hover:text-bhutan-red transition duration-300">Home</a>
+                        </li>
+                        <li><a href="#"
+                                class="menu-item text-gray-700 hover:text-bhutan-red transition duration-300">About</a>
+                        </li>
+                        <li><a href="#"
+                                class="menu-item text-gray-700 hover:text-bhutan-red transition duration-300">Ministries</a>
+                        </li>
+                        <li><a href="#"
+                                class="menu-item text-gray-700 hover:text-bhutan-red transition duration-300">Services</a>
+                        </li>
+                        <li><a href="#"
+                                class="menu-item text-gray-700 hover:text-bhutan-red transition duration-300">News</a>
+                        </li>
+                        <li><a href="#"
+                                class="menu-item text-gray-700 hover:text-bhutan-red transition duration-300">Contact</a>
+                        </li>
                     </ul>
                 </nav>
                 <div class="flex items-center space-x-4">
-                    <button id="searchToggle" class="text-gray-700 hover:text-bhutan-red transition duration-300" aria-label="Toggle search">
+                    <button id="searchToggle" class="text-gray-700 hover:text-bhutan-red transition duration-300"
+                        aria-label="Toggle search">
                         <i class="fas fa-search"></i>
                     </button>
-                    <button id="menuToggle" class="md:hidden text-gray-700 hover:text-bhutan-red transition duration-300" aria-label="Toggle menu">
+                    <button id="menuToggle"
+                        class="md:hidden text-gray-700 hover:text-bhutan-red transition duration-300"
+                        aria-label="Toggle menu">
                         <i class="fas fa-bars"></i>
                     </button>
                 </div>
@@ -92,18 +135,26 @@
         <div class="bg-white h-full w-64 p-6 transform transition-transform duration-300 ease-in-out translate-x-0">
             <div class="flex justify-between items-center mb-6">
                 <h2 class="text-xl font-semibold text-bhutan-red">Menu</h2>
-                <button id="closeMenu" class="text-gray-600 hover:text-bhutan-red transition duration-300" aria-label="Close menu">
+                <button id="closeMenu" class="text-gray-600 hover:text-bhutan-red transition duration-300"
+                    aria-label="Close menu">
                     <i class="fas fa-times"></i>
                 </button>
             </div>
             <nav>
                 <ul class="space-y-4">
-                    <li><a href="#" class="block text-gray-700 hover:text-bhutan-red transition duration-300">Home</a></li>
-                    <li><a href="#" class="block text-gray-700 hover:text-bhutan-red transition duration-300">About</a></li>
-                    <li><a href="#" class="block text-gray-700 hover:text-bhutan-red transition duration-300">Ministries</a></li>
-                    <li><a href="#" class="block text-gray-700 hover:text-bhutan-red transition duration-300">Services</a></li>
-                    <li><a href="#" class="block text-gray-700 hover:text-bhutan-red transition duration-300">News</a></li>
-                    <li><a href="#" class="block text-gray-700 hover:text-bhutan-red transition duration-300">Contact</a></li>
+                    <li><a href="#" class="block text-gray-700 hover:text-bhutan-red transition duration-300">Home</a>
+                    </li>
+                    <li><a href="#" class="block text-gray-700 hover:text-bhutan-red transition duration-300">About</a>
+                    </li>
+                    <li><a href="#"
+                            class="block text-gray-700 hover:text-bhutan-red transition duration-300">Ministries</a>
+                    </li>
+                    <li><a href="#"
+                            class="block text-gray-700 hover:text-bhutan-red transition duration-300">Services</a></li>
+                    <li><a href="#" class="block text-gray-700 hover:text-bhutan-red transition duration-300">News</a>
+                    </li>
+                    <li><a href="#"
+                            class="block text-gray-700 hover:text-bhutan-red transition duration-300">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -113,8 +164,12 @@
     <div id="searchOverlay" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center">
         <div class="bg-white p-6 rounded-lg w-full max-w-2xl mx-4">
             <form class="flex items-center">
-                <input type="text" placeholder="Search..." class="flex-grow p-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-bhutan-amber" aria-label="Search">
-                <button type="submit" class="bg-bhutan-red text-white p-2 rounded-r-md hover:bg-bhutan-amber transition duration-300" aria-label="Submit search">
+                <input type="text" placeholder="Search..."
+                    class="flex-grow p-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-bhutan-amber"
+                    aria-label="Search">
+                <button type="submit"
+                    class="bg-bhutan-red text-white p-2 rounded-r-md hover:bg-bhutan-amber transition duration-300"
+                    aria-label="Submit search">
                     <i class="fas fa-search"></i>
                 </button>
             </form>
@@ -268,9 +323,50 @@
         </div>
     </div>
 
-
     <!-- Scripts -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,dz',
+            }, 'google_translate_element');
+        }
+    
+        function changeLanguage(lang) {
+            var selectField = document.querySelector("select.goog-te-combo");
+            if (selectField) {
+                selectField.value = lang;
+                selectField.dispatchEvent(new Event('change'));
+            } else {
+                console.error('Language selector not found');
+            }
+        }
+    </script>
+    
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script>
+        // Text size change function
+        function changeTextSize(action) {
+            var body = document.body;
+            var currentSize = window.getComputedStyle(body, null).getPropertyValue('font-size');
+            var newSize;
+
+            switch (action) {
+                case 'increase':
+                    newSize = parseFloat(currentSize) * 1.1;
+                    break;
+                case 'decrease':
+                    newSize = parseFloat(currentSize) * 0.9;
+                    break;
+                case 'reset':
+                    newSize = 16;  // Default font size
+                    break;
+            }
+
+            body.style.fontSize = newSize + 'px';
+        }
+
+        // Existing script for menu toggle and search overlay
         const menuToggle = document.getElementById('menuToggle');
         const mobileMenu = document.getElementById('mobileMenu');
         const closeMenu = document.getElementById('closeMenu');
