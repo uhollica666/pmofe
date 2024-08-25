@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Minister's Office of Bhutan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'bhutan-amber': '#FF8C00',
+                        'bhutan-red': '#D2691E',
+                    },
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <!-- Top Bar -->
+    <div class="bg-bhutan-amber text-white py-2">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div>
+                <span class="mr-4">📧 info@pmo.gov.bt</span>
+                <span>📞 +975 2 323845</span>
+            </div>
+            <div>
+                <a href="#" class="mr-4">English</a>
+                <a href="#">Dzongkha</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <img src="/api/placeholder/100/60" alt="Government Logo" class="h-16">
+                <img src="/api/placeholder/120/60" alt="Office Logo" class="h-16">
+                <img src="/api/placeholder/100/60" alt="Seal Logo" class="h-16">
+            </div>
+            <div class="mt-4">
+                <form class="flex">
+                    <input type="text" placeholder="Search..."
+                        class="flex-grow p-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-bhutan-amber">
+                    <button type="submit"
+                        class="bg-bhutan-red text-white p-2 rounded-r-md hover:bg-bhutan-amber transition duration-300">Search</button>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="bg-bhutan-red text-white shadow-md">
+        <div class="container mx-auto px-4">
+            <ul class="flex justify-between py-4">
+                <li><a href="#" class="hover:text-bhutan-amber transition duration-300">Home</a></li>
+                <li><a href="#" class="hover:text-bhutan-amber transition duration-300">About</a></li>
+                <li><a href="#" class="hover:text-bhutan-amber transition duration-300">Ministries</a></li>
+                <li><a href="#" class="hover:text-bhutan-amber transition duration-300">Services</a></li>
+                <li><a href="#" class="hover:text-bhutan-amber transition duration-300">News</a></li>
+                <li><a href="#" class="hover:text-bhutan-amber transition duration-300">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Slider Area -->
+    <section class="bg-gray-200 py-12">
+        <div class="container mx-auto px-4">
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="/api/placeholder/1200/400" alt="Slider Image" class="w-full h-64 object-cover">
+                <div class="p-6">
+                    <h2 class="text-3xl font-bold mb-4">Welcome to the Prime Minister's Office</h2>
+                    <p class="text-gray-600 mb-4">Serving the people of Bhutan with dedication and vision</p>
+                    <a href="#"
+                        class="bg-bhutan-amber text-white px-4 py-2 rounded-md hover:bg-bhutan-red transition duration-300">Learn
+                        More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest News and Posts -->
+    <section class="py-12">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold mb-6">Latest News and Updates</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="/api/placeholder/400/200" alt="News 1" class="w-full h-40 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold mb-2">New Economic Policy Announced</h3>
+                        <p class="text-gray-600 text-sm">The Prime Minister unveiled a new economic policy aimed at
+                            boosting growth and sustainability...</p>
+                        <a href="#"
+                            class="text-bhutan-red hover:text-bhutan-amber transition duration-300 mt-2 inline-block">Read
+                            More</a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="/api/placeholder/400/200" alt="News 2" class="w-full h-40 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold mb-2">Bhutan Hosts International Summit</h3>
+                        <p class="text-gray-600 text-sm">Bhutan successfully hosted an international summit on climate
+                            change, bringing together world leaders...</p>
+                        <a href="#"
+                            class="text-bhutan-red hover:text-bhutan-amber transition duration-300 mt-2 inline-block">Read
+                            More</a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="/api/placeholder/400/200" alt="News 3" class="w-full h-40 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold mb-2">New Education Initiative Launched</h3>
+                        <p class="text-gray-600 text-sm">The government has launched a new education initiative to
+                            improve access to quality education across the country...</p>
+                        <a href="#"
+                            class="text-bhutan-red hover:text-bhutan-amber transition duration-300 mt-2 inline-block">Read
+                            More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Members Showcase -->
+    <section class="bg-gray-100 py-12">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold mb-6">Cabinet Members</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden text-center">
+                    <img src="/api/placeholder/200/200" alt="Member 1" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold">John Doe</h3>
+                        <p class="text-gray-600 text-sm">Prime Minister</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden text-center">
+                    <img src="/api/placeholder/200/200" alt="Member 2" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold">Jane Smith</h3>
+                        <p class="text-gray-600 text-sm">Foreign Minister</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden text-center">
+                    <img src="/api/placeholder/200/200" alt="Member 3" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold">Mike Johnson</h3>
+                        <p class="text-gray-600 text-sm">Finance Minister</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden text-center">
+                    <img src="/api/placeholder/200/200" alt="Member 4" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold">Sarah Lee</h3>
+                        <p class="text-gray-600 text-sm">Education Minister</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-bhutan-red text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <img src="/api/placeholder/120/60" alt="Office Logo" class="h-16 mb-4">
+                    <p>Prime Minister's Office</p>
+                    <p>Gyalyong Tshokhang</p>
+                    <p>Thimphu, Bhutan</p>
+                </div>
+                <div>
+                    <h3 class="font-bold mb-4">Useful Links</h3>
+                    <ul>
+                        <li><a href="#" class="hover:text-bhutan-amber transition duration-300">About Us</a></li>
+                        <li><a href="#" class="hover:text-bhutan-amber transition duration-300">Services</a></li>
+                        <li><a href="#" class="hover:text-bhutan-amber transition duration-300">News</a></li>
+                        <li><a href="#" class="hover:text-bhutan-amber transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold mb-4">Ministries</h3>
+                    <ul>
+                        <li><a href="#" class="hover:text-bhutan-amber transition duration-300">Foreign Affairs</a></li>
+                        <li><a href="#" class="hover:text-bhutan-amber transition duration-300">Finance</a></li>
+                        <li><a href="#" class="hover:text-bhutan-amber transition duration-300">Education</a></li>
+                        <li><a href="#" class="hover:text-bhutan-amber transition duration-300">Health</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold mb-4">Connect With Us</h3>
+                    <p>📧 info@pmo.gov.bt</p>
+                    <p>📞 +975 2 323845</p>
+                    <div class="mt-4">
+                        <a href="#" class="mr-4">Facebook</a>
+                        <a href="#" class="mr-4">Twitter</a>
+                        <a href="#">Instagram</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Copyright -->
+    <div class="bg-bhutan-amber text-white py-4">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2024 Prime Minister's Office of Bhutan. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+
+</html>
